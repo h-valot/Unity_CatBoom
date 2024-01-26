@@ -10,7 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf4baa2c377fb6848b326f8c6e271d78, type: 3}
-  m_Name: SettingsPlayer
+  m_Name: GameSettings
   m_EditorClassIdentifier: 
-  smoothAmount: 0.26
-  maxRotation: 16.4
+  rotationSmoothDuration: 0.1
+  maxRotation: 4.5
+  fallingSpeed: 30
+  speedMultiplier: 2
+  drag: 0
+  mass: 1
+  cameraOffsetY: -2
+  cameraLerpDuration: 0.01

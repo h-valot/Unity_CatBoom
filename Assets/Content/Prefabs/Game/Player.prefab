@@ -129,11 +129,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 741557583049145975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e361e5edea4c9288d52a479808cca2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6691be432fe46d94dba7032c7cdeeb37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rsoRotationPlayer: {fileID: 11400000, guid: cfb1dfca80ce68449b3fa1eb74f227dd, type: 2}
+  _rsoPositionPlayer: {fileID: 11400000, guid: 74d58036e6ae44746b2b68bf64b4c540, type: 2}
+  _gameSettings: {fileID: 11400000, guid: 22195061f47f66e4b997afcf874328de, type: 2}
+  _graphicsParent: {fileID: 6058234972993446555}
   rigidbody2D: {fileID: 1550646416460156826}
-  graphicsParent: {fileID: 6058234972993446555}
 --- !u!50 &1550646416460156826
 Rigidbody2D:
   serializedVersion: 4

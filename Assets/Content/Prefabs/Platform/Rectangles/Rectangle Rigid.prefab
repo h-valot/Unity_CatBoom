@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 802283003963868390, guid: f03397e6bdc07df42820f7c014d21811, type: 3}
       propertyPath: m_Name
-      value: Platform Rigid Variant
+      value: Rectangle Rigid
       objectReference: {fileID: 0}
     - target: {fileID: 8686845304228398669, guid: f03397e6bdc07df42820f7c014d21811, type: 3}
       propertyPath: m_LocalPosition.x
