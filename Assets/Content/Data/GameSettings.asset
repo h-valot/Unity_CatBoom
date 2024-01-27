@@ -19,4 +19,6 @@ MonoBehaviour:
   drag: 1
   mass: 1
   cameraOffsetY: -2.5
-  cameraLerpDuration: 1
+  cameraLerpYDuration: 1
+  cameraLerpXDuration: 1
+  thresholdBlockX: -3
