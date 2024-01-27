@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraController : MonoBehaviour
 {
@@ -31,9 +32,9 @@ public class CameraController : MonoBehaviour
 
     private void FollowPlayer()
     {
-        transform.position = new Vector3(
-            transform.position.x, 
-            Mathf.Lerp(transform.position.y, _rsoPositionPlayer.value.y + _gameSettings.cameraOffsetY, _gameSettings.cameraLerpDuration) , 
+        transform.position = new Vector3((transform.position.y < _gameSettings.thresholdBlockX) ? transform.position.x : Mathf.Lerp(transform.position.x, _rsoPositionPlayer.value.x, _gameSettings.cameraLerpXDuration),
+            Mathf.Lerp(transform.position.y, _rsoPositionPlayer.value.y + _gameSettings.cameraOffsetY, _gameSettings.cameraLerpYDuration),
             transform.position.z);
+        if (transform.position.y < _gameSettings.thresholdBlockX) transform.DOMoveX(0,_gameSettings.cameraLerpXDuration);
     }
 }
