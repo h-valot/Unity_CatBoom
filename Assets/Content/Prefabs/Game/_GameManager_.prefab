@@ -48,4 +48,4 @@ MonoBehaviour:
   _rseSoundStop: {fileID: 11400000, guid: 16da162e76fa3c442b7294c8ff4ea6a8, type: 2}
   _audioClips:
   - {fileID: 8300000, guid: 3fc7d82e55b419c40a84f16649de4476, type: 3}
-  - {fileID: 8300000, guid: d2f05655fad80ea489abf964dc143888, type: 3}
+  - {fileID: 8300000, guid: 00cebb1c3cc290846a4a62f59ccb1a9d, type: 3}

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -33,27 +34,13 @@ public class SoundManager : MonoBehaviour
 
     private bool IsSoundPlaying(TypeSound typeSound, ref AudioClip audioClip)
     {
-        switch (typeSound)
-        {
-            case TypeSound.VFX:
-                return _audioSources.Find(o => o.typeSound == typeSound).audioSources[0].clip == audioClip;
-            default:
-                return false;
-        }
+        return _audioSources.Find(o => o.typeSound == typeSound).audioSources[0].clip == audioClip;
     }
 
     private AudioSource GetSourceTarget(TypeSound typeSound, AudioClip audioClip)
     {
-        switch (typeSound)
-        {
-            case TypeSound.VFX:
-                return _audioSources.Find(o => o.typeSound == typeSound).audioSources[0];
-            case TypeSound.Background:
-                var source = _audioSources.Find(o =>o.typeSound == typeSound).audioSources.Find(o => o.clip == audioClip);
-                return (source == null)? _audioSources.Find(o => o.typeSound == typeSound).audioSources.Find(o=> o.clip == null):source;
-            default:
-                return null;
-        }
+        var source = _audioSources.Find(o => o.typeSound == typeSound).audioSources.Find(o => o.clip == audioClip);
+        return (source == null) ? _audioSources.Find(o => o.typeSound == typeSound).audioSources.Find(o => o.clip == null) : source;
     }
 
     private void StopSound(TypeSound typeSound, AudioClip audioClip, bool isLoop) 
@@ -74,13 +61,19 @@ public class SoundManager : MonoBehaviour
             var audioSource = GetSourceTarget(typeSound, audioClip); 
             audioSource.clip = audioClip; 
             audioSource.Play();
-            audioSource.loop = isLoop; 
+            audioSource.loop = isLoop;
+            if (!isLoop) StartCoroutine(UnlockSourceAudio(audioSource, audioClip.length));
         } 
     }
 
     private void UpdateMusicVolume() => _musicAudioMixer.audioMixer.SetFloat("Music Volume", Mathf.Log10(_rsoMusicVolume.value) * 20);
     private void UpdateVfxVolume() => _vfxAudioMixer.audioMixer.SetFloat("Vfx Volume", Mathf.Log10(_rsoVfxVolume.value) * 20);
 
+    private IEnumerator UnlockSourceAudio(AudioSource source,float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        source.clip = null;
+    }
 }
 
 [System.Serializable]
