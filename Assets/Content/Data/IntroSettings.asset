@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2703959ebddd0994ab093a01092cc91d, type: 3}
   m_Name: IntroSettings
   m_EditorClassIdentifier: 
-  sceneToLoad: Game
+  sceneToLoad: LevelDesignTestLoic
   voiceOver: {fileID: 0}
   fadeInDuration: 1
   introImages:
-  - image: {fileID: 21300000, guid: 38cbf4b4ae9f785418121f755a70b541, type: 3}
+  - image: {fileID: 21300000, guid: 1afde8239f71cb74bb442baea0a81f6c, type: 3}
     duration: 3
-  - image: {fileID: 21300000, guid: c1717cbfeb868f343b2b5bf5d7460a10, type: 3}
+  - image: {fileID: 21300000, guid: 825ad0234a78d67459be84bbdbc39784, type: 3}
+    duration: 3
+  - image: {fileID: 21300000, guid: ccc53dd3382c66348a67a3c479c99d95, type: 3}
+    duration: 3
+  - image: {fileID: 21300000, guid: 136c2163ff3ad594b8047a30f78949ac, type: 3}
     duration: 3

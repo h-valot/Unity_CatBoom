@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6bb2b038b34122946a787c35d72c770f
+guid: df800c8aae2baf646964b051d9f375dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1097754588165732379
-    second: cat_explosion_2_0
+      213: -8973224047210885158
+    second: game_over_2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat_explosion_2_0
+      name: game_over_2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b187c265bf10c3f00800000000000000
-      internalID: 1097754588165732379
+      spriteID: adf80007544b87380800000000000000
+      internalID: -8973224047210885158
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cat_explosion_2_0: 1097754588165732379
+      game_over_2_0: -8973224047210885158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
