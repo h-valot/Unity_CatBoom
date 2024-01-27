@@ -13,18 +13,11 @@ namespace Game
         [Header("References")]
         [SerializeField] private GameSettings _gameSettings;
 
-        [Header("Data")]
-        [SerializeField] private AudioClip[] _audioClips;
-        [SerializeField] private RSE_Sound _rseSoundPlay;
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (!collision.gameObject.TryGetComponent<Controller>(out var player)) return;
 
-
-            if (!player.onGround) _rseSoundPlay.Call(TypeSound.VFX, _audioClips[UnityEngine.Random.Range(0, _audioClips.Length)], false);
-            player.onGround = true;
-            player.nearPlatform = true;
+            player.GetDamaged();
 
             if (-player.GetComponent<Rigidbody2D>().velocity.y > _velocityThreshold)
             {
