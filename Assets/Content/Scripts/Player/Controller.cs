@@ -7,6 +7,7 @@ namespace Player
         [Header("References")]
         [SerializeField] private RSO_RotationPlayer _rsoRotationPlayer;
         [SerializeField] private RSO_PositionPlayer _rsoPositionPlayer;
+        [SerializeField] private RSE_PlayerDeath _rsePlayerDeath;
         [SerializeField] private GameSettings _gameSettings;
         [SerializeField] private GameObject _graphicsParent;
 
@@ -33,6 +34,9 @@ namespace Player
     
         public void HandleDeath()
         {
+            
+            
+            _rsePlayerDeath.Call();
             Destroy(_graphicsParent);
         }
     }

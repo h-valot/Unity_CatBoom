@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rsoRotationPlayer: {fileID: 11400000, guid: cfb1dfca80ce68449b3fa1eb74f227dd, type: 2}
   _rsoPositionPlayer: {fileID: 11400000, guid: 74d58036e6ae44746b2b68bf64b4c540, type: 2}
+  _rsePlayerDeath: {fileID: 11400000, guid: 96b01d3723dd3e14cbf61ff61d9ab9b3, type: 2}
   _gameSettings: {fileID: 11400000, guid: 22195061f47f66e4b997afcf874328de, type: 2}
   _graphicsParent: {fileID: 6058234972993446555}
   rigidbody2D: {fileID: 1550646416460156826}

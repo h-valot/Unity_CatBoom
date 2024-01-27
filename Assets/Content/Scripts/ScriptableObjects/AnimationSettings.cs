@@ -1,15 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "IntroSettings", menuName = "Configs/Intro settings")]
-public class IntroSettings : ScriptableObject
+[CreateAssetMenu(fileName = "AnimationSettings", menuName = "Configs/animation settings")]
+public class AnimationSettings : ScriptableObject
 {
     [Header("Tweakable values")] 
     public string sceneToLoad;
     
-    [Header("Sound")]
-    public AudioClip voiceOver;
-
     [Header("Graphics")] 
     public float fadeInDuration;
     public List<IntroImage> introImages;
@@ -18,6 +15,7 @@ public class IntroSettings : ScriptableObject
 [System.Serializable]
 public class IntroImage
 {
+    public AudioClip audioClip;
     public Sprite image;
     public float duration;
 }
