@@ -19,4 +19,4 @@ MonoBehaviour:
   drag: 0
   mass: 1
   cameraOffsetY: -2
-  cameraLerpDuration: 0.01
+  cameraLerpDuration: 1
