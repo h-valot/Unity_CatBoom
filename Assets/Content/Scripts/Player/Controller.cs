@@ -18,6 +18,8 @@ namespace Player
         
         [Header("Audio")]
         [SerializeField] private AudioClip[] _audioClips;
+        [SerializeField] private AudioClip[] _cancelledClips;
+        [SerializeField] private AudioClip _deathSound;
         [SerializeField] private RSE_Sound _rseSoundPlay;
         [SerializeField] private RSE_Sound _rseSoundStop;
         
@@ -34,31 +36,38 @@ namespace Player
         [Header("Public variables")]
         public bool onGround;
         public bool nearPlatform;
+        public bool canMove = true;
         
         public void OnEnable() =>  _rsoRotationPlayer.OnChanged += ApplyDirectionGravity;
         public void OnDisable() => _rsoRotationPlayer.OnChanged -= ApplyDirectionGravity;
         
         private void ApplyDirectionGravity()
         {
+            if (!canMove) return;
+            
             Physics2D.gravity = new Vector2(_rsoRotationPlayer.value * _gameSettings.speedMultiplier, -_gameSettings.fallingSpeed);
-        }
-
-        private void UpdateRigidbody()
-        {
-            rigidbody2D.drag = _gameSettings.drag;
-            rigidbody2D.mass = _gameSettings.mass;
         }
         
         private void FixedUpdate()
         {
+            if (!canMove) return;
+            
             _rsoPositionPlayer.value = transform.position;
             // if (onGround && (rigidbody2D.velocity.x < -0.6f || rigidbody2D.velocity.x > 0.6f)) _rseSoundPlay.Call(TypeSound.VFX, _audioRolling, true);
             // else if (!onGround || (onGround && (rigidbody2D.velocity.x < -0.2f || rigidbody2D.velocity.x > 0.2f))) _rseSoundStop.Call(TypeSound.VFX, _audioRolling, false);
             UpdateRigidbody();
         }
+        
+        private void UpdateRigidbody()
+        {
+            rigidbody2D.drag = _gameSettings.drag;
+            rigidbody2D.mass = _gameSettings.mass;
+        }
 
         public async void GetDamaged()
         {
+            if (!canMove) return;
+            
             if (!onGround) _rseSoundPlay.Call(TypeSound.VFX, _audioClips[Random.Range(0, _audioClips.Length - 1)], false);
             
             onGround = true;
@@ -71,13 +80,22 @@ namespace Player
         
         public async void HandleDeath()
         {
+            if (!canMove) return;
+            
+            foreach (AudioClip audioClip in _cancelledClips)
+                _rseSoundStop.Call(TypeSound.Background, audioClip, false);
+            
+            _rseSoundPlay.Call(TypeSound.VFX, _deathSound, false);
+            
             Time.timeScale = 0;
-            _explosionGameObject.transform.DOScale(10, _preAnimationDuration).SetUpdate(true);
+            _explosionGameObject.SetActive(true);
             await Task.Delay(Mathf.RoundToInt(_preAnimationDuration * 1000));
             Time.timeScale = 1;
             
             _rsePlayerDeath.Call();
-            Destroy(_graphicsParent);
+            
+            rigidbody2D.velocity = Vector2.zero;
+            canMove = false;
         }
     }
 }

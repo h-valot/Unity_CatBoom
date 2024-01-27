@@ -13,8 +13,6 @@ public class IntroManager : MonoBehaviour
     
     public async void PlayIntro()
     {
-        
-        
         // black fade in
         _blackImage.DOFade(1, _animationSettings.fadeInDuration).SetEase(Ease.OutCirc);
         await Task.Delay(Mathf.RoundToInt(_animationSettings.fadeInDuration * 1000));

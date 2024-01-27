@@ -142,6 +142,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aa284af20a19ea040be9a8a70218e605, type: 3}
   - {fileID: 8300000, guid: f29aec14dd3b7b345a58514a8bd6aca6, type: 3}
   - {fileID: 8300000, guid: dbe7e4d8afce56442a0d77905ecd0a09, type: 3}
+  _cancelledClips:
+  - {fileID: 8300000, guid: 00cebb1c3cc290846a4a62f59ccb1a9d, type: 3}
+  - {fileID: 8300000, guid: 3fc7d82e55b419c40a84f16649de4476, type: 3}
+  _deathSound: {fileID: 8300000, guid: 9cd8fdb0f71ff894bb8758513d19e55d, type: 3}
   _rseSoundPlay: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
   _rseSoundStop: {fileID: 11400000, guid: 16da162e76fa3c442b7294c8ff4ea6a8, type: 2}
   _catSpriteRenderer: {fileID: 4374935511933134885}
@@ -149,7 +153,7 @@ MonoBehaviour:
   _catAlive: {fileID: 1812447978917872481, guid: a7aee16989930c84093a17c9c40d4aeb, type: 3}
   _damageAnimationDuration: 0.2
   _explosionGameObject: {fileID: 2017480982784350285}
-  _preAnimationDuration: 0.3
+  _preAnimationDuration: 0.75
   onGround: 0
   nearPlatform: 0
 --- !u!50 &1550646416460156826
@@ -231,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4310832919756037163
 Transform:
   m_ObjectHideFlags: 0
@@ -241,8 +245,8 @@ Transform:
   m_GameObject: {fileID: 2017480982784350285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 0, z: 0.16}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0.094, y: 0, z: 0.15}
+  m_LocalScale: {x: 0.68550175, y: 0.68550175, z: 0.68550175}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7290122429770692483}
