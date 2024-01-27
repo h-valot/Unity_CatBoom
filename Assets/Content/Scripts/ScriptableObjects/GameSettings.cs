@@ -15,5 +15,7 @@ public class GameSettings : ScriptableObject
     
     [Header("Camera")]
     public float cameraOffsetY;
-    public float cameraLerpDuration;
+    public float cameraLerpYDuration;
+    public float cameraLerpXDuration;
+    public float thresholdBlockX;
 }

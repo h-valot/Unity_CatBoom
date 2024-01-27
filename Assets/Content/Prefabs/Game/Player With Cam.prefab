@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1550646416460156826}
   - component: {fileID: 3995469256641919591}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player With Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
