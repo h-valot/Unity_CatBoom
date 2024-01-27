@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2826947930308516799}
   - component: {fileID: 9021734354336930346}
-  - component: {fileID: 7297877590998411124}
+  - component: {fileID: 6431020937625931648}
   - component: {fileID: 3598712246526430246}
   m_Layer: 0
   m_Name: TriangleGeneric
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocityThreshold: 6
---- !u!60 &7297877590998411124
+--- !u!60 &6431020937625931648
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +94,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.61546236, y: 0.8144558}
-      - {x: 0.783046, y: -0.60471994}
-      - {x: -0.62147695, y: -0.6227099}
+    - - {x: -0.41508788, y: 0.5867021}
+      - {x: -0.5012877, y: 0.5086565}
+      - {x: 0.52060634, y: -0.50686157}
+      - {x: 0.604106, y: -0.4340917}
   m_UseDelaunayMesh: 0
 --- !u!60 &3598712246526430246
 PolygonCollider2D:
