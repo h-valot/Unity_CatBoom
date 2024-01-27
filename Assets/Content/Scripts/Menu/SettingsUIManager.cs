@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsUIManager : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField] private GameObject _graphicsParent;
     [SerializeField] private RSO_VfxVolume _rsoVfxVolume;
     [SerializeField] private RSO_MusicVolume _rsoMusicVolume;
-    [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _vfxSlider;
-    [SerializeField] private GameObject _graphicsParent;
+    [SerializeField] private Slider _musicSlider;
 
     public void Show()
     {
@@ -22,15 +23,13 @@ public class SettingsUIManager : MonoBehaviour
         _graphicsParent.SetActive(false);
     }
     
-    public void UpdateVfxVolume()
+    public void OnChangeVfxVolume(float value)
     {
-        // updates rso music volume
-        _rsoVfxVolume.value = _vfxSlider.value;
+        _rsoVfxVolume.value = value;
     }
 
-    public void UpdateMusicVolume()
+    public void OnChangeMusicVolume(float value)
     {
-        // updates rso sound volume
-        _rsoMusicVolume.value = _musicSlider.value;
+        _rsoMusicVolume.value = value;
     }
 }

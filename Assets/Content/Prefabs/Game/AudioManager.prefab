@@ -320,6 +320,10 @@ MonoBehaviour:
     - {fileID: 6928448269181392986}
   _rseSoundLaunch: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
   _rseSoundStop: {fileID: 11400000, guid: 16da162e76fa3c442b7294c8ff4ea6a8, type: 2}
+  _musicAudioMixer: {fileID: -6304103191932578088, guid: 71b13db5ccd8ec947b336866614fbef3, type: 2}
+  _vfxAudioMixer: {fileID: -2560020289490557548, guid: 71b13db5ccd8ec947b336866614fbef3, type: 2}
+  _rsoMusicVolume: {fileID: 11400000, guid: f41cbc4c8a005c14bad3ff90a72dc718, type: 2}
+  _rsoVfxVolume: {fileID: 11400000, guid: a49f94ebcbf38a34287242eae10648ea, type: 2}
 --- !u!1 &2570156214652466083
 GameObject:
   m_ObjectHideFlags: 0
