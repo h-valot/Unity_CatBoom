@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MenuUIManager : MonoBehaviour
+public class HUDManager : MonoBehaviour
 {
     [Header("References")] 
     [SerializeField] private IntroManager _introManager;
