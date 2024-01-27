@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "IntroSettings", menuName = "Configs/Intro settings")]

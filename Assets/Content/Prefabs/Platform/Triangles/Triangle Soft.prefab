@@ -68,6 +68,18 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3805103122514511889, guid: b31407115b2ce3847bd5d560dfb0137a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635961649288419026, guid: b31407115b2ce3847bd5d560dfb0137a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984312017246166439, guid: b31407115b2ce3847bd5d560dfb0137a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 985b8b8377afb6e47b9cf6026323d4e2, type: 3}
     - target: {fileID: 9021734354336930346, guid: b31407115b2ce3847bd5d560dfb0137a, type: 3}
       propertyPath: _velocityThreshold
       value: 999
