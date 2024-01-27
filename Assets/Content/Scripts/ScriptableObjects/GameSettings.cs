@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameSettings", menuName = "Configs/GameSettings")]
+[CreateAssetMenu(fileName = "GameSettings", menuName = "Configs/Game settings")]
 public class GameSettings : ScriptableObject
 {
     [Header("Controller")]
