@@ -16,7 +16,7 @@ MonoBehaviour:
   maxRotation: 4.5
   fallingSpeed: 30
   speedMultiplier: 2
-  drag: 0
+  drag: 1
   mass: 1
-  cameraOffsetY: -2
+  cameraOffsetY: -2.5
   cameraLerpDuration: 1
