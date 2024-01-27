@@ -7,6 +7,7 @@ public class GameSettings : ScriptableObject
     public float rotationSmoothDuration;
     public float maxRotation;
     public float fallingSpeed;
+    public float onAirThreshold;
 
     [Header("Physics")] 
     public float speedMultiplier;

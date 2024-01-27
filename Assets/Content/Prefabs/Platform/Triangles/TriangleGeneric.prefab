@@ -48,6 +48,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocityThreshold: 6
+  _gameSettings: {fileID: 11400000, guid: 22195061f47f66e4b997afcf874328de, type: 2}
+  _audioClips:
+  - {fileID: 8300000, guid: 0edf1f8ade057f34ab1a4d32288e3a24, type: 3}
+  - {fileID: 8300000, guid: aa284af20a19ea040be9a8a70218e605, type: 3}
+  - {fileID: 8300000, guid: f29aec14dd3b7b345a58514a8bd6aca6, type: 3}
+  - {fileID: 8300000, guid: dbe7e4d8afce56442a0d77905ecd0a09, type: 3}
+  _rseSoundPlay: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
 --- !u!60 &6431020937625931648
 PolygonCollider2D:
   m_ObjectHideFlags: 0

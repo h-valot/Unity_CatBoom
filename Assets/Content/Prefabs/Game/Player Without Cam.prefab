@@ -133,10 +133,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rsoRotationPlayer: {fileID: 11400000, guid: cfb1dfca80ce68449b3fa1eb74f227dd, type: 2}
   _rsoPositionPlayer: {fileID: 11400000, guid: 74d58036e6ae44746b2b68bf64b4c540, type: 2}
-  _rsePlayerDeath: {fileID: 11400000, guid: 96b01d3723dd3e14cbf61ff61d9ab9b3, type: 2}
+  _rseSoundPlay: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
+  _rseSoundStop: {fileID: 11400000, guid: 16da162e76fa3c442b7294c8ff4ea6a8, type: 2}
   _gameSettings: {fileID: 11400000, guid: 22195061f47f66e4b997afcf874328de, type: 2}
   _graphicsParent: {fileID: 6058234972993446555}
+  _audioRolling: {fileID: 8300000, guid: 18532943d93008c4d922615fd575b0c4, type: 3}
   rigidbody2D: {fileID: 1550646416460156826}
+  onGround: 0
+  nearPlatform: 0
 --- !u!50 &1550646416460156826
 Rigidbody2D:
   serializedVersion: 4
