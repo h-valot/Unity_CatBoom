@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _blackImage: {fileID: 1489603102}
   _illustration: {fileID: 695189816}
-  _introSettings: {fileID: 11400000, guid: bc90de1097b261e4886053658f741564, type: 2}
+  _animationSettings: {fileID: 11400000, guid: bc90de1097b261e4886053658f741564, type: 2}
 --- !u!1 &902403336
 GameObject:
   m_ObjectHideFlags: 0

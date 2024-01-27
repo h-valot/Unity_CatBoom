@@ -65,8 +65,10 @@ public class SoundManager : MonoBehaviour
             audioSource.Stop();
         }
     }
-    private void LaunchSound(TypeSound typeSound, AudioClip audioClip, bool isLoop) 
-    { 
+    private void LaunchSound(TypeSound typeSound, AudioClip audioClip, bool isLoop)
+    {
+        print($"sound manager: audio clip = {audioClip.name}");
+        
         if (!IsSoundPlaying(typeSound, ref audioClip)) 
         { 
             var audioSource = GetSourceTarget(typeSound, audioClip); 
