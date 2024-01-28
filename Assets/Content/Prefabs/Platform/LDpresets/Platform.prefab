@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3397885939166749658, guid: e45eb019eb775db4097924e9371078bc, type: 3}
       propertyPath: _velocityThreshold
-      value: 8.5
+      value: 8.45
       objectReference: {fileID: 0}
     - target: {fileID: 5414364245274676669, guid: e45eb019eb775db4097924e9371078bc, type: 3}
       propertyPath: m_EdgeRadius
