@@ -22,4 +22,4 @@ MonoBehaviour:
   cameraOffsetY: -2.5
   cameraLerpYDuration: 1
   cameraLerpXDuration: 1
-  thresholdBlockX: -4
+  thresholdBlockX: -3

@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2772574069500915503, guid: be7cdfcf769f83f42bae21cb235a0e8f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.49896276
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2772574069500915503, guid: be7cdfcf769f83f42bae21cb235a0e8f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6185059182972759428, guid: be7cdfcf769f83f42bae21cb235a0e8f, type: 3}
       propertyPath: m_Name
-      value: Rectangle Soft Variant
+      value: Soft Platform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
