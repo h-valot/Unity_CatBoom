@@ -1,15 +1,31 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class SettingsUIManager : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private GameObject _graphicsParent;
+    [Header("External references")]
     [SerializeField] private RSO_VfxVolume _rsoVfxVolume;
     [SerializeField] private RSO_MusicVolume _rsoMusicVolume;
+    [SerializeField] private RSE_VictoryLineReached _rseVictoryLineReached;
+    [SerializeField] private RSE_PlayerDeath _rsePlayerDeath;
+    [SerializeField] private GameObject _buttonParent;
+    
+    [Header("References")]
+    [SerializeField] private GameObject _graphicsParent;
     [SerializeField] private Slider _vfxSlider;
     [SerializeField] private Slider _musicSlider;
+
+    private void OnEnable()
+    {
+        _rseVictoryLineReached.action += HideAll;
+        _rsePlayerDeath.action += HideAll;
+    }
+    
+    private void OnDisable()
+    {
+        _rseVictoryLineReached.action -= HideAll;
+        _rsePlayerDeath.action -= HideAll;
+    }
 
     public void Show()
     {
@@ -21,6 +37,12 @@ public class SettingsUIManager : MonoBehaviour
     public void Hide()
     {
         _graphicsParent.SetActive(false);
+    }
+
+    public void HideAll()
+    {
+        _buttonParent.SetActive(false);
+        Hide();
     }
     
     public void OnChangeVfxVolume(float value)

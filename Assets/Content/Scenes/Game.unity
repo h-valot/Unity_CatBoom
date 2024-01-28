@@ -16567,6 +16567,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022187572}
     m_Modifications:
+    - target: {fileID: 360227979802277070, guid: 3aecb40d88161b740ac7612e8a3e54f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 991386731482481557, guid: 3aecb40d88161b740ac7612e8a3e54f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16650,6 +16654,10 @@ PrefabInstance:
     - target: {fileID: 6789803338187310839, guid: 3aecb40d88161b740ac7612e8a3e54f0, type: 3}
       propertyPath: m_Name
       value: GameOver Animation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994213824244490441, guid: 3aecb40d88161b740ac7612e8a3e54f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27703,6 +27711,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3963471893669737823, guid: 9bccb44107bb4664ba227db53751cac7, type: 3}
+      propertyPath: _buttonParent
+      value: 
+      objectReference: {fileID: 2069213558}
     - target: {fileID: 4010590671117875000, guid: 9bccb44107bb4664ba227db53751cac7, type: 3}
       propertyPath: m_Name
       value: Settings Menu
@@ -28982,6 +28994,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
   m_PrefabInstance: {fileID: 1663833409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2069213558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5030752367964191560, guid: d5c0405e4cf3a3c4c8a9531b55bfb5bd, type: 3}
+  m_PrefabInstance: {fileID: 1966097783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2069432212
 PrefabInstance:
