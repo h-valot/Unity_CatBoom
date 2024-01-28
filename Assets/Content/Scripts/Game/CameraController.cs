@@ -45,6 +45,7 @@ public class CameraController : MonoBehaviour
         if (transform.position.y < _gameSettings.thresholdBlockX)
         {
             transform.DOMoveX(0, _gameSettings.cameraLerpXDuration);
+            transform.DOMoveY(_rsoPositionPlayer.value.y + _gameSettings.cameraOffsetY, _gameSettings.cameraLerpYDuration);
         }
     }
 }
