@@ -222,11 +222,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3592577402743462671, guid: 2b77f21dbed79db488e56aa86231414c, type: 3}
       propertyPath: m_Name
-      value: Left Roof Variant
+      value: Left Roof
       objectReference: {fileID: 0}
     - target: {fileID: 3711765523837150303, guid: 2b77f21dbed79db488e56aa86231414c, type: 3}
       propertyPath: m_Name
       value: Building
+      objectReference: {fileID: 0}
+    - target: {fileID: 5496451221575617882, guid: 2b77f21dbed79db488e56aa86231414c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6797504296451050043, guid: 2b77f21dbed79db488e56aa86231414c, type: 3}
       propertyPath: m_Sprite

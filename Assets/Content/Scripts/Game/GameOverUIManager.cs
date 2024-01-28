@@ -70,7 +70,7 @@ public class GameOverUIManager : MonoBehaviour
         _blackImage.DOFade(0, 0);
         _retryBackground.DOFade(0, 0);
         
-        SceneManager.LoadScene("Content/Scenes/LevelDesignTestLoic");
+        SceneManager.LoadScene("Game");
     }
 
     public void Exit()
@@ -81,6 +81,6 @@ public class GameOverUIManager : MonoBehaviour
         _blackImage.DOFade(0, 0);
         _retryBackground.DOFade(0, 0);
         
-        SceneManager.LoadScene("Content/Scenes/TestMenuHugo");
+        SceneManager.LoadScene("Menu");
     }
 }

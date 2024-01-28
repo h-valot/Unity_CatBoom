@@ -1,5 +1,5 @@
+using System;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,15 +8,35 @@ public class ProgressionManager : MonoBehaviour
     [Header("References")] 
     [SerializeField] private StartingBox _startingBox;
     [SerializeField] private VictoryBox _victoryBox;
+    [SerializeField] private TextMeshProUGUI _fillTM;
+    [SerializeField] private Image _fillImage;
+    [SerializeField] private GameObject _uiParent;
 
     [Header("External references")] 
     [SerializeField] private RSO_PositionPlayer _rsoPositionPlayer;
-    [SerializeField] private TextMeshProUGUI _fillTM;
-    [SerializeField] private Image _fillImage;
+    [SerializeField] private RSE_PlayerDeath _rsePlayerDeath;
+    [SerializeField] private RSE_VictoryLineReached _rseVictoryLineReached;
     
     private float _totalDistance;
     private float _remainingDistance;
+
+    private void OnEnable()
+    {
+        _rsePlayerDeath.action += HideHUD;
+        _rseVictoryLineReached.action += HideHUD;
+    }
     
+    private void OnDisable()
+    {
+        _rsePlayerDeath.action -= HideHUD;
+        _rseVictoryLineReached.action -= HideHUD;
+    }
+
+    private void HideHUD()
+    {
+        _uiParent.SetActive(false);
+    }
+
     private void Update()
     {
         _totalDistance = Mathf.Abs(_victoryBox.transform.position.y - _startingBox.transform.position.y);

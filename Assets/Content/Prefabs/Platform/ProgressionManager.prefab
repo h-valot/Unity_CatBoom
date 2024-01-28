@@ -286,9 +286,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingBox: {fileID: 1359064718700814917}
   _victoryBox: {fileID: 5881155401188165491}
-  _rsoPositionPlayer: {fileID: 11400000, guid: 74d58036e6ae44746b2b68bf64b4c540, type: 2}
   _fillTM: {fileID: 8656434793991918366}
   _fillImage: {fileID: 3201024368118769423}
+  _uiParent: {fileID: 1764044577898966781}
+  _rsoPositionPlayer: {fileID: 11400000, guid: 74d58036e6ae44746b2b68bf64b4c540, type: 2}
+  _rsePlayerDeath: {fileID: 11400000, guid: 96b01d3723dd3e14cbf61ff61d9ab9b3, type: 2}
+  _rseVictoryLineReached: {fileID: 11400000, guid: e746bc1715e3ac145ae938064ac4f2bd, type: 2}
 --- !u!1 &4114923418816856940
 GameObject:
   m_ObjectHideFlags: 0

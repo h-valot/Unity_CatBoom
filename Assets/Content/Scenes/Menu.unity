@@ -1031,9 +1031,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   components:
-  - isActif: 1
-    obj: {fileID: 668980826}
   - isActif: 0
+    obj: {fileID: 668980826}
+  - isActif: 1
     obj: {fileID: 635381567}
 --- !u!1 &635381567
 GameObject:

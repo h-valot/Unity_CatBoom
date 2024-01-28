@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2703959ebddd0994ab093a01092cc91d, type: 3}
   m_Name: IntroSettings
   m_EditorClassIdentifier: 
-  sceneToLoad: LevelDesignTestLoic
+  sceneToLoad: Game
   fadeInDuration: 1
   introImages:
   - audioClip: {fileID: 0}
