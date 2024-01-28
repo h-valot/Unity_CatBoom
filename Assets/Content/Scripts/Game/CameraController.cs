@@ -32,9 +32,19 @@ public class CameraController : MonoBehaviour
 
     private void FollowPlayer()
     {
-        transform.position = new Vector3((transform.position.y < _gameSettings.thresholdBlockX) ? transform.position.x : Mathf.Lerp(transform.position.x, _rsoPositionPlayer.value.x, _gameSettings.cameraLerpXDuration),
-            Mathf.Lerp(transform.position.y, _rsoPositionPlayer.value.y + _gameSettings.cameraOffsetY, _gameSettings.cameraLerpYDuration),
-            transform.position.z);
-        if (transform.position.y < _gameSettings.thresholdBlockX) transform.DOMoveX(0,_gameSettings.cameraLerpXDuration);
+        float x = transform.position.y > _gameSettings.thresholdBlockX
+            ? Mathf.Lerp(transform.position.x, _rsoPositionPlayer.value.x, _gameSettings.cameraLerpXDuration)
+            : transform.position.x;
+
+        float y = transform.position.y < _gameSettings.thresholdBlockX
+            ? Mathf.Lerp(transform.position.y, _rsoPositionPlayer.value.y + _gameSettings.cameraOffsetY, _gameSettings.cameraLerpYDuration)
+            : _rsoPositionPlayer.value.y + _gameSettings.onRoofOffsetY; 
+        
+        transform.position = new Vector3(x, y, transform.position.z);
+        
+        if (transform.position.y < _gameSettings.thresholdBlockX)
+        {
+            transform.DOMoveX(0, _gameSettings.cameraLerpXDuration);
+        }
     }
 }

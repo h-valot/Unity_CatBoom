@@ -19,6 +19,7 @@ MonoBehaviour:
   speedMultiplier: 2
   drag: 1
   mass: 1
+  onRoofOffsetY: 2.34
   cameraOffsetY: -2.5
   cameraLerpYDuration: 1
   cameraLerpXDuration: 1

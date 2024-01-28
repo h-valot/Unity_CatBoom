@@ -13,8 +13,9 @@ public class GameSettings : ScriptableObject
     public float speedMultiplier;
     public float drag;
     public float mass;
-    
-    [Header("Camera")]
+
+    [Header("Camera")] 
+    public float onRoofOffsetY;
     public float cameraOffsetY;
     public float cameraLerpYDuration;
     public float cameraLerpXDuration;
