@@ -58,6 +58,6 @@ public class VictoryUIManager : MonoBehaviour
         _plane.transform.DOMove(_endingPoint.transform.position, _translationDuration);
         await Task.Delay(Mathf.RoundToInt(_translationDuration * 1000));
 
-        SceneManager.LoadScene("TestMenuHugo");
+        SceneManager.LoadScene("Menu");
     }
 }
