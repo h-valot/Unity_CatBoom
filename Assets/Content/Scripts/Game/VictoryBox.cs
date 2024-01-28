@@ -8,7 +8,8 @@ public class VictoryBox : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.TryGetComponent<Controller>(out var player)) return;
+        if (!other.gameObject.TryGetComponent<Controller>(out var player)) 
+            return;
 
         player.canMove = false;
         _rseVictoryLineReached.Call();
