@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 161717191
+    locked: 0
+  - name: Sign
+    uniqueID: 1202030227
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

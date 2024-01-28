@@ -15,7 +15,7 @@ MonoBehaviour:
   sceneToLoad: 
   fadeInDuration: 1
   introImages:
-  - audioClip: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: a2f97bf2cccedfa40bbefbbd74e46711, type: 3}
     image: {fileID: 21300000, guid: b8edab1e7e75f804ebfe9cbef4d10d7c, type: 3}
     duration: 3
   - audioClip: {fileID: 0}

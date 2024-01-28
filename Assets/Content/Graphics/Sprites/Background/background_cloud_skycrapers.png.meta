@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      background_cloud_skycrapers_0: -5125544876145551877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

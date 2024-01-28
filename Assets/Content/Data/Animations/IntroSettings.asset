@@ -15,15 +15,15 @@ MonoBehaviour:
   sceneToLoad: Game
   fadeInDuration: 1
   introImages:
-  - audioClip: {fileID: 0}
+  - audioClip: {fileID: 8300000, guid: 0e35724c27b201642b74dcd36f32b7cb, type: 3}
     image: {fileID: 21300000, guid: 1afde8239f71cb74bb442baea0a81f6c, type: 3}
-    duration: 3
+    duration: 6
   - audioClip: {fileID: 0}
     image: {fileID: 21300000, guid: 825ad0234a78d67459be84bbdbc39784, type: 3}
-    duration: 3
+    duration: 4
   - audioClip: {fileID: 0}
     image: {fileID: 21300000, guid: ccc53dd3382c66348a67a3c479c99d95, type: 3}
-    duration: 3
+    duration: 8
   - audioClip: {fileID: 0}
     image: {fileID: 21300000, guid: 136c2163ff3ad594b8047a30f78949ac, type: 3}
-    duration: 1
+    duration: 2

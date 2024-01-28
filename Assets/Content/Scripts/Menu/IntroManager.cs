@@ -10,6 +10,11 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private Image _blackImage;
     [SerializeField] private Image _illustration;
     [SerializeField] private AnimationSettings _animationSettings;
+    
+    
+    [Header("External references")] 
+    [SerializeField] private RSE_Sound _rseSound;
+    
 
     private bool _canLoadScene;
     private AsyncOperation _asyncOperation;
@@ -28,6 +33,7 @@ public class IntroManager : MonoBehaviour
         // slides
         foreach (IntroImage introImage in _animationSettings.introImages)
         {
+            if (introImage.audioClip != null) _rseSound.Call(TypeSound.VFX, introImage.audioClip, false);
             _illustration.sprite = introImage.image;
             await Task.Delay(Mathf.RoundToInt(introImage.duration * 1000));
         }
