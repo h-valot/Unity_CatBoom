@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _musicMenu: {fileID: 8300000, guid: a62f77a3b0daf5349b5960009d336922, type: 3}
-  _introSound: {fileID: 8300000, guid: a71474721c6ce8c4f828643c4d73a355, type: 3}
+  _introSound: {fileID: 8300000, guid: b6b2b09bd3c84074aa05a665facd8743, type: 3}
   _rseSoundLaunch: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
   _rseSoundStop: {fileID: 11400000, guid: 16da162e76fa3c442b7294c8ff4ea6a8, type: 2}
 --- !u!1 &123472475
@@ -1513,6 +1513,7 @@ MonoBehaviour:
   _blackImage: {fileID: 1489603102}
   _illustration: {fileID: 695189816}
   _animationSettings: {fileID: 11400000, guid: bc90de1097b261e4886053658f741564, type: 2}
+  _rseSound: {fileID: 11400000, guid: a02720d82d25f5c40abc299cab56e07f, type: 2}
 --- !u!1 &850900785
 GameObject:
   m_ObjectHideFlags: 0
