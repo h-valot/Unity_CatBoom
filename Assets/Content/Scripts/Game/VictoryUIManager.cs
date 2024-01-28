@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class VictoryUIManager : MonoBehaviour
@@ -56,7 +57,7 @@ public class VictoryUIManager : MonoBehaviour
         // plane translation
         _plane.transform.DOMove(_endingPoint.transform.position, _translationDuration);
         await Task.Delay(Mathf.RoundToInt(_translationDuration * 1000));
-        
-        Application.Quit();
+
+        SceneManager.LoadScene("TestMenuHugo");
     }
 }

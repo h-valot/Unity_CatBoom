@@ -17,6 +17,8 @@ public class IntroManager : MonoBehaviour
         _blackImage.DOFade(1, _animationSettings.fadeInDuration).SetEase(Ease.OutCirc);
         await Task.Delay(Mathf.RoundToInt(_animationSettings.fadeInDuration * 1000));
         
+        
+        
         _illustration.gameObject.SetActive(true);
         // _introSettings.voiceOver.Play;
 

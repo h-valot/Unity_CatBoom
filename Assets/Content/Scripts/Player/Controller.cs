@@ -13,7 +13,6 @@ namespace Player
         [SerializeField] private GameSettings _gameSettings;
         
         [Header("References")]
-        [SerializeField] private GameObject _graphicsParent;
         public Rigidbody2D rigidbody2D;
         
         [Header("Audio")]
@@ -30,6 +29,7 @@ namespace Player
         
         [Header("Killed")]
         [SerializeField] private GameObject _explosionGameObject;
+        [SerializeField] private Sprite _catDead;
         [SerializeField] private float _preAnimationDuration;
         
 
@@ -86,6 +86,7 @@ namespace Player
                 _rseSoundStop.Call(TypeSound.Background, audioClip, false);
             
             _rseSoundPlay.Call(TypeSound.VFX, _deathSound, false);
+            _catSpriteRenderer.sprite = _catDead;
             
             Time.timeScale = 0;
             _explosionGameObject.SetActive(true);

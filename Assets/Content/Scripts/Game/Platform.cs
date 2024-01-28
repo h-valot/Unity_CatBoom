@@ -19,7 +19,7 @@ namespace Game
 
             player.GetDamaged();
 
-            if (-player.GetComponent<Rigidbody2D>().velocity.y > _velocityThreshold)
+            if (-player.rigidbody2D.velocity.y > _velocityThreshold)
             {
                 player.HandleDeath();
                 return;
