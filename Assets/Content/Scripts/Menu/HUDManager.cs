@@ -7,7 +7,6 @@ public class HUDManager : MonoBehaviour
 
     public void Play()
     {
-        print("MENU UI MANAGER: button pressed");
         _introManager.PlayIntro();
     }
 }

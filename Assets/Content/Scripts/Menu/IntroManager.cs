@@ -10,14 +10,17 @@ public class IntroManager : MonoBehaviour
     [SerializeField] private Image _blackImage;
     [SerializeField] private Image _illustration;
     [SerializeField] private AnimationSettings _animationSettings;
+
+    private bool _canLoadScene;
+    private AsyncOperation _asyncOperation;
     
     public async void PlayIntro()
     {
+        LoadSceneAsync(_animationSettings.sceneToLoad);
+        
         // black fade in
         _blackImage.DOFade(1, _animationSettings.fadeInDuration).SetEase(Ease.OutCirc);
         await Task.Delay(Mathf.RoundToInt(_animationSettings.fadeInDuration * 1000));
-        
-        
         
         _illustration.gameObject.SetActive(true);
         // _introSettings.voiceOver.Play;
@@ -29,9 +32,14 @@ public class IntroManager : MonoBehaviour
             await Task.Delay(Mathf.RoundToInt(introImage.duration * 1000));
         }
 
-        // reset before load game scene at the end
-        _illustration.gameObject.SetActive(false);
-        _blackImage.DOFade(0, 0);
-        SceneManager.LoadScene(_animationSettings.sceneToLoad);
+        // load scene
+        _asyncOperation.allowSceneActivation = true;
+    }
+
+    private async void LoadSceneAsync(string sceneToLoad)
+    {
+        _asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        while (_asyncOperation.progress < 0.9f) await Task.Delay(100);
+        _asyncOperation.allowSceneActivation = false;
     }
 }
