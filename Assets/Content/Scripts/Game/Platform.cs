@@ -1,6 +1,5 @@
-﻿using Player;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
+﻿using System.Collections;
+using Player;
 using UnityEngine;
 
 namespace Game
@@ -29,13 +28,13 @@ namespace Game
         private void OnTriggerExit2D(Collider2D collision)
         {
             if (!collision.gameObject.TryGetComponent<Controller>(out var player)) return;
-            StartTimer(player);
+            StartCoroutine(StartTimer(player));
             player.nearPlatform = false;
         }
 
-        private async void StartTimer(Controller player)
+        private IEnumerator StartTimer(Controller player)
         {
-            await Task.Delay(Mathf.RoundToInt(1000 * _gameSettings.onAirThreshold));
+            yield return new WaitForSeconds(_gameSettings.onAirThreshold);
             if (!player.nearPlatform) player.onGround = false;
         }
     }

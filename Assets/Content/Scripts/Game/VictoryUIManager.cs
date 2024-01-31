@@ -1,4 +1,4 @@
-using System.Threading.Tasks;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,14 +28,14 @@ public class VictoryUIManager : MonoBehaviour
     [SerializeField] private GameObject _endingPoint;
     
 
-    private void OnEnable() => _rseVictoryLineReached.action += PlayVictory;
-    private void OnDisable() => _rseVictoryLineReached.action -= PlayVictory;
-    
-    private async void PlayVictory()
+    private void OnEnable() => _rseVictoryLineReached.action += StartAniamtion;
+    private void OnDisable() => _rseVictoryLineReached.action -= StartAniamtion;
+    private void StartAniamtion() => StartCoroutine(PlayVictory());
+    private IEnumerator PlayVictory()
     {
         // black fade in
         _blackImage.DOFade(1, _victorySettings.fadeInDuration).SetEase(Ease.OutCirc);
-        await Task.Delay(Mathf.RoundToInt(_victorySettings.fadeInDuration * 1000));
+        yield return new WaitForSeconds(_victorySettings.fadeInDuration);
         
         _illustration.gameObject.SetActive(true);
 
@@ -44,19 +44,19 @@ public class VictoryUIManager : MonoBehaviour
         {
             if (introImage.audioClip != null) _rseSound.Call(TypeSound.VFX, introImage.audioClip, false);
             _illustration.sprite = introImage.image;
-            await Task.Delay(Mathf.RoundToInt(introImage.duration * 1000));
+            yield return new WaitForSeconds(introImage.duration);
         }
         // black fade in 
         _menuBackground.DOFade(_menuBackgroundFadeAmount, _menuFadeOutDuration);
-        await Task.Delay(Mathf.RoundToInt(_menuFadeOutDuration * 1000));
+        yield return new WaitForSeconds(_menuFadeOutDuration);
         _menuGameObject.SetActive(true);
         
         // plane waiting time
-        await Task.Delay(Mathf.RoundToInt(_durationBeforePlane * 1000));
+        yield return new WaitForSeconds(_durationBeforePlane);
         
         // plane translation
         _plane.transform.DOMove(_endingPoint.transform.position, _translationDuration);
-        await Task.Delay(Mathf.RoundToInt(_translationDuration * 1000));
+        yield return new WaitForSeconds(_translationDuration);
 
         SceneManager.LoadScene("Menu");
     }

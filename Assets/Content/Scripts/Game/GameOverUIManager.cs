@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,25 +26,25 @@ public class GameOverUIManager : MonoBehaviour
     [SerializeField] private float _retryFadeIntDuration;
     
 
-    private void OnEnable() => _rsePlayerDeath.action += PlayGameOver;
-    private void OnDisable() => _rsePlayerDeath.action -= PlayGameOver;
-
-    private async void PlayGameOver()
+    private void OnEnable() => _rsePlayerDeath.action += StartAnimation;
+    private void OnDisable() => _rsePlayerDeath.action -= StartAnimation;
+    private void StartAnimation() => StartCoroutine(PlayGameOver());
+    private IEnumerator PlayGameOver()
     {
         // black fade in
         _blackImage.DOFade(1, _gameOverSettings.fadeInDuration).SetEase(Ease.OutCirc);
-        await Task.Delay(Mathf.RoundToInt(_gameOverSettings.fadeInDuration * 1000));
+        yield return new WaitForSeconds(_gameOverSettings.fadeInDuration);
         _illustration.gameObject.SetActive(true);
 
         // cat's face
         _illustration.sprite = _gameOverSettings.introImages[0].image;
         if (_gameOverSettings.introImages[0].audioClip != null) _rseSound.Call(TypeSound.VFX, _gameOverSettings.introImages[0].audioClip, false);
-        await Task.Delay(Mathf.RoundToInt(_gameOverSettings.introImages[0].duration * 1000));
+        yield return new WaitForSeconds(_gameOverSettings.introImages[0].duration);
         
         // flash bang
         _illustration.sprite = _gameOverSettings.introImages[1].image;
         if (_gameOverSettings.introImages[1].audioClip != null) _rseSound.Call(TypeSound.VFX, _gameOverSettings.introImages[1].audioClip, false);
-        await Task.Delay(Mathf.RoundToInt(_gameOverSettings.introImages[1].duration * 1000));
+        yield return new WaitForSeconds(_gameOverSettings.introImages[1].duration);
         
         // display nuke
         if (_gameOverSettings.introImages[2].audioClip != null) _rseSound.Call(TypeSound.VFX, _gameOverSettings.introImages[2].audioClip, false);
@@ -54,10 +54,10 @@ public class GameOverUIManager : MonoBehaviour
         _illustration.DOFade(0, _flashBangFadeOutDuration).SetEase(Ease.OutCirc);
         
         // display nuke for x seconds
-        await Task.Delay(Mathf.RoundToInt(_gameOverSettings.introImages[2].duration * 1000));
+        yield return new WaitForSeconds(_gameOverSettings.introImages[2].duration);
 
         _retryBackground.DOFade(_retryBackgroundFadeAmount, _retryFadeIntDuration);
-        await Task.Delay(Mathf.RoundToInt(_retryFadeIntDuration * 1000));
+        yield return new WaitForSeconds(_retryFadeIntDuration);
         
         _retryMenu.SetActive(true);
     }
