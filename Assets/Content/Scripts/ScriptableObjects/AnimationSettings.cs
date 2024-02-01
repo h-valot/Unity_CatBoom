@@ -18,4 +18,5 @@ public class IntroImage
     public AudioClip audioClip;
     public Sprite image;
     public float duration;
+    [TextArea] public string subtitle;
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class VictoryUIManager : MonoBehaviour
     [SerializeField] private Image _blackImage;
     [SerializeField] private Image _illustration;
     [SerializeField] private Image _plane;
+    [SerializeField] private TextMeshProUGUI _subtitleTM;
 
     [Header("Menu")]
     [SerializeField] private Image _menuBackground;
@@ -38,17 +40,20 @@ public class VictoryUIManager : MonoBehaviour
         yield return new WaitForSeconds(_victorySettings.fadeInDuration);
         
         _illustration.gameObject.SetActive(true);
+        _subtitleTM.gameObject.SetActive(true);
 
         // slides
         foreach (var introImage in _victorySettings.introImages)
         {
             if (introImage.audioClip != null) _rseSound.Call(TypeSound.VFX, introImage.audioClip, false);
             _illustration.sprite = introImage.image;
+            _subtitleTM.text = introImage.subtitle;
             yield return new WaitForSeconds(introImage.duration);
         }
         // black fade in 
         _menuBackground.DOFade(_menuBackgroundFadeAmount, _menuFadeOutDuration);
         yield return new WaitForSeconds(_menuFadeOutDuration);
+        _subtitleTM.gameObject.SetActive(false);
         _menuGameObject.SetActive(true);
         
         // plane waiting time

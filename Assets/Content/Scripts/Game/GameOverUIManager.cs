@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class GameOverUIManager : MonoBehaviour
     [SerializeField] private Image _blackImage;
     [SerializeField] private Image _illustration;
     [SerializeField] private Image _nukeImage;
+    [SerializeField] private TextMeshProUGUI _subtitleTM;
     
     [Header("Animation settings")]
     [SerializeField] private float _flashBangFadeOutDuration;
@@ -35,11 +37,14 @@ public class GameOverUIManager : MonoBehaviour
         _blackImage.DOFade(1, _gameOverSettings.fadeInDuration).SetEase(Ease.OutCirc);
         yield return new WaitForSeconds(_gameOverSettings.fadeInDuration);
         _illustration.gameObject.SetActive(true);
+        _subtitleTM.gameObject.SetActive(true);
 
         // cat's face
         _illustration.sprite = _gameOverSettings.introImages[0].image;
+        _subtitleTM.text = _gameOverSettings.introImages[0].subtitle;
         if (_gameOverSettings.introImages[0].audioClip != null) _rseSound.Call(TypeSound.VFX, _gameOverSettings.introImages[0].audioClip, false);
         yield return new WaitForSeconds(_gameOverSettings.introImages[0].duration);
+        _subtitleTM.gameObject.SetActive(false);
         
         // flash bang
         _illustration.sprite = _gameOverSettings.introImages[1].image;

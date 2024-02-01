@@ -18,9 +18,12 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: a2f97bf2cccedfa40bbefbbd74e46711, type: 3}
     image: {fileID: 21300000, guid: b8edab1e7e75f804ebfe9cbef4d10d7c, type: 3}
     duration: 3
+    subtitle: The cat always lands on their feet.
   - audioClip: {fileID: 0}
     image: {fileID: 21300000, guid: d63936c0a55e7b4488aaba00935e644f, type: 3}
     duration: 3
+    subtitle: And luckily, someone was there to help our cat.
   - audioClip: {fileID: 0}
     image: {fileID: 21300000, guid: 6fd6a167effc2a34797b391bcd195697, type: 3}
     duration: 1.5
+    subtitle: The city is now safe.
