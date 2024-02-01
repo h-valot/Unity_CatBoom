@@ -4746,7 +4746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6098,7 +6098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13715,7 +13715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14075,7 +14075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16077,23 +16077,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.65
+      value: -12.598
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.86
+      value: 0.719
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16129,7 +16129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981714156529194540, guid: 028bb573104124b42a689e90b669e761, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27913,7 +27913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 8966913682300275315, guid: 5c2dcb97399d5a34987ee49ab00a176f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31096,7 +31096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2772574069500915503, guid: be7cdfcf769f83f42bae21cb235a0e8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.75003
+      value: 53.76
       objectReference: {fileID: 0}
     - target: {fileID: 2772574069500915503, guid: be7cdfcf769f83f42bae21cb235a0e8f, type: 3}
       propertyPath: m_LocalPosition.z
